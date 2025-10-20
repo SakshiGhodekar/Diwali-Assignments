@@ -1,26 +1,20 @@
- import java.util.Scanner;
+import java.util.*;
 public class PrimeCheck{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a number: ");
-        int n = sc.nextInt();
-
-        boolean isPrime = true;
-
-        if (n <= 1) {
-            isPrime = false;
-        } else {
-            for (int i = 2; i <= n / 2; i++) {
-                if (n % i == 0) {
-                    isPrime = false;
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter number to check");
+        int num=sc.nextInt();
+        boolean isPrime=true;
+        if(num<=1){
+            isPrime=false;
+        }else{
+            for(int i=2;i<num;i++){
+                if(num%2==0){
+                    isPrime=false;
                     break;
                 }
             }
         }
-
         System.out.println(isPrime);
-        sc.close();
     }
 }
-
